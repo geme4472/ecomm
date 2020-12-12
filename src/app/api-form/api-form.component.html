@@ -1,0 +1,50 @@
+<a [routerLink]="['/']" class="float-right btn btn-primary">back</a>
+
+<form [formGroup]="apiForm" (ngSubmit)="onSubmit()">
+    <h2>Player</h2>
+
+        <label>
+            First Name:
+            <input type="text" formControlName="firstName">
+        </label>
+
+        <label>
+            Last Name:
+            <input type="text" formControlName="lastName">
+        </label>
+
+        <label>
+          Database ID (debugging only):
+          <input type="text" formControlName="dbID">
+        </label>
+  
+  
+        <h2>Statistics</h2>
+
+        <label>
+            Passing TDs:
+            <input type="text" formControlName="passing">
+        </label>
+
+        <label>
+            Rushing Yards:
+            <input type="text" formControlName="rushing">
+        </label>
+        
+        <label>
+            Catches:
+            <input type="text" formControlName="catches">
+        </label>
+
+        <label>
+            Missed Field Goals:
+            <input type="text" formControlName="fg">
+        </label>
+
+        <label>
+            Sacks:
+            <input type="text" formControlName="sacks">
+        </label>
+  
+    <button type="submit">Submit</button>
+  </form>

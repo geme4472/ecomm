@@ -1,0 +1,23 @@
+<h2>{{description}}</h2>
+    
+<div *ngFor="let player of players">
+
+    <div class="card m-3" style="min-width: 400px;">
+        <h5 class="card-header"> {{player.firstName}} {{player.lastName}}     
+            <div class="float-right">
+                <a class="btn btn-primary btn-sm mr-1" [routerLink]="['/form', player._id]">edit</a>
+                <a (click)="deletePlayer(player._id)" class="btn btn-primary btn-sm" href="#">delete</a>    
+            </div>
+        </h5>
+        <div class="card-body" style="text-align: left;">
+            <div>Passing TDs: {{player.passTDs}}</div>
+            <div>Rushing Yards: {{player.rushingYards}}</div>
+            <div>Catches Made: {{player.catchesMade}}</div>
+            <div>Missed Field Goals: {{player.missedFG}}</div>
+            <div>Sacks: {{player.sacks}}</div>
+        </div>
+    </div>
+
+</div>
+
+
